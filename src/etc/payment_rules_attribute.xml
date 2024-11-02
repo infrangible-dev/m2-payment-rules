@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<!--
+ * @author      Andreas Knollmann
+ * @copyright   2014-2024 Softwareentwicklung Andreas Knollmann
+ * @license     http://www.opensource.org/licenses/mit-license.php MIT
+-->
+<config>
+    <custom_field name="loggedin">
+        <label>Logged In</label>
+        <model>Infrangible\PaymentRules\Model\Rule\Condition\LoggedIn</model>
+    </custom_field>
+</config>

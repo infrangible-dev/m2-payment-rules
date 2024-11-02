@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<!--
+ * @author      Andreas Knollmann
+ * @copyright   2014-2024 Softwareentwicklung Andreas Knollmann
+ * @license     http://www.opensource.org/licenses/mit-license.php MIT
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Infrangible_PaymentRules::infrangible_paymentrules" title="Payment Rules" translate="title" module="Infrangible_PaymentRules" sortOrder="850" resource="Infrangible_PaymentRules::infrangible_paymentrules" parent="Infrangible_Foundation::menu"/>
+        <add id="Infrangible_PaymentRules::infrangible_paymentrules_manage" title="Manage Rules" translate="title" module="Infrangible_PaymentRules" sortOrder="10" resource="Infrangible_PaymentRules::infrangible_paymentrules" action="infrangible_paymentrules/rule/index" parent="Infrangible_PaymentRules::infrangible_paymentrules"/>
+    </menu>
+</config>

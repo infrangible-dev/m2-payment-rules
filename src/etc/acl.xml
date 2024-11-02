@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<!--
+ * @author      Andreas Knollmann
+ * @copyright   2014-2024 Softwareentwicklung Andreas Knollmann
+ * @license     http://www.opensource.org/licenses/mit-license.php MIT
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Infrangible_Foundation::menu">
+                    <resource id="Infrangible_PaymentRules::infrangible_paymentrules" title="Payment Rules" translate="title" sortOrder="850"/>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>
