@@ -2,7 +2,7 @@
     "name": "infrangible/m2-payment-rules",
     "description": "Infrangible Magento 2 Payment Rules",
     "type": "magento2-module",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "license": "MIT",
     "keywords": [
         "Magento"
@@ -19,7 +19,7 @@
     "require": {
         "php": ">=7.1",
         "magento/framework": "~102.3.5|~103.0.0",
-        "infrangible/m2-backend-widget": "~2.2"
+        "infrangible/m2-backend-widget": "~2.4"
     },
     "autoload": {
         "files": [
