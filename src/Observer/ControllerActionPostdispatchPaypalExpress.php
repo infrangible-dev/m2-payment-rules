@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Infrangible\PaymentRules\Observer;
 
+use FeWeDev\Base\Variables;
 use Infrangible\PaymentRules\Helper\Data;
 use Magento\Checkout\Model\Session;
 use Magento\Framework\App\Action\Context;
@@ -19,7 +20,7 @@ use Magento\Paypal\Controller\Express\AbstractExpress;
 
 /**
  * @author      Andreas Knollmann
- * @copyright   2014-2024 Softwareentwicklung Andreas Knollmann
+ * @copyright   2014-2025 Softwareentwicklung Andreas Knollmann
  * @license     http://www.opensource.org/licenses/mit-license.php MIT
  */
 class ControllerActionPostdispatchPaypalExpress implements ObserverInterface
@@ -36,12 +37,20 @@ class ControllerActionPostdispatchPaypalExpress implements ObserverInterface
     /** @var RedirectInterface */
     protected $redirect;
 
-    public function __construct(Data $paymentRulesHelper, Session $checkoutSession, Context $context)
-    {
+    /** @var Variables */
+    protected $variables;
+
+    public function __construct(
+        Data $paymentRulesHelper,
+        Session $checkoutSession,
+        Context $context,
+        Variables $variables
+    ) {
         $this->paymentRulesHelper = $paymentRulesHelper;
         $this->checkoutSession = $checkoutSession;
         $this->messageManager = $context->getMessageManager();
         $this->redirect = $context->getRedirect();
+        $this->variables = $variables;
     }
 
     /**
@@ -70,7 +79,7 @@ class ControllerActionPostdispatchPaypalExpress implements ObserverInterface
         $this->paymentRulesHelper->checkSourceObjectPaymentMethodCode(
             $quote->getShippingAddress(),
             '',
-            $quote->getStore()->getWebsiteId(),
+            $this->variables->intValue($quote->getStore()->getWebsiteId()),
             'paypal_express',
             $checkResult
         );
