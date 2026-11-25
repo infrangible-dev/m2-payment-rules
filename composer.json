@@ -1,11 +1,19 @@
 {
     "name": "infrangible/m2-payment-rules",
-    "description": "Infrangible Magento 2 Payment Rules",
+    "description": "Shows or hides payment methods in the checkout based on rules with conditions on customer data, address data or login status.",
     "type": "magento2-module",
     "version": "1.1.2",
     "license": "MIT",
     "keywords": [
-        "Magento"
+        "Magento",
+        "Magento 2",
+        "Adobe Commerce",
+        "Payment",
+        "Cart and checkout",
+        "Customers",
+        "payment method rules",
+        "hide payment methods by customer group",
+        "conditional payment methods"
     ],
     "homepage": "https://github.com/infrangible-dev/m2-payment-rules",
     "authors": [
